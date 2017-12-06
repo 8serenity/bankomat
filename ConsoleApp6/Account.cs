@@ -4,62 +4,78 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AccountNamespace
+namespace Bankomat
 {
-    public class Account
+    namespace AccountNamespace
     {
-        private int accountID;
-        private string password;
-        private double moneyDollars;
-        private double moneyTenge;
-        private double moneyRuble;
-        Random random = new Random();
+        public class Account
+        {
+            private int accountID;
+            private string name;
+            private string password;
+            private double amountMoney;
+            static Random random;
 
-        public Account()
-        {
-            accountID = random.Next(10000000, 100000000);
-            moneyDollars = 0;
-            moneyRuble = 0;
-            moneyTenge = 0;
-        }
-        public void SetPassword(string password)
-        {
-            if (this.password != null)
+            static Account()
             {
-                Console.WriteLine("Enter your old password");
-                if (Console.ReadLine() == this.password)
+                random = new Random();
+            }
+
+            public Account(string name)
+            {
+                this.name = name;
+                accountID = random.Next(10000000, 100000000);
+                password = random.Next(1000, 10000).ToString();
+                amountMoney = 0;
+            }
+            public void SetPassword(string password)
+            {
+                if (this.password != null)
                 {
-                    this.password = password;
+                    Console.WriteLine("Enter your old password");
+                    if (Console.ReadLine() == this.password)
+                    {
+                        this.password = password;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Password incorrect");
+                    }
                 }
                 else
                 {
-                    Console.WriteLine("Password incorrect");
+                    this.password = password;
                 }
             }
-            else
+
+            public string GetPassword()
             {
-                this.password = password;
+                return password;
+            }
+
+            public int GetAccountID()
+            {
+                return accountID;
+            }
+            public double GetMoneyAmmount()
+            {
+                return amountMoney;
+            }
+
+            public void SetMoneyAmount(int money)
+            {
+                amountMoney = money;
+            }
+
+            public void AddMoney(int money)
+            {
+                amountMoney += money;
+            }
+
+            public string GetName()
+            {
+                return name;
             }
         }
-
-        public int GetAccountID()
-        {
-            return accountID;
-        }
-        public double GetMoneyDollars()
-        {
-            return moneyDollars;
-        }
-
-        public double GetMoneyTenge()
-        {
-            return moneyTenge;
-        }
-
-        public double GetMoneyRuble()
-        {
-            return moneyRuble;
-        }
-
     }
 }

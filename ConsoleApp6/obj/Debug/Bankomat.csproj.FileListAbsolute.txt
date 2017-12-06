@@ -4,3 +4,9 @@ c:\users\мухамедьян\documents\visual studio 2017\Projects\ConsoleApp6\
 c:\users\мухамедьян\documents\visual studio 2017\Projects\ConsoleApp6\ConsoleApp6\bin\Debug\Bankomat.pdb
 c:\users\мухамедьян\documents\visual studio 2017\Projects\ConsoleApp6\ConsoleApp6\obj\Debug\Bankomat.exe
 c:\users\мухамедьян\documents\visual studio 2017\Projects\ConsoleApp6\ConsoleApp6\obj\Debug\Bankomat.pdb
+C:\Users\serenity\Documents\Visual Studio 2015\Projects\Bankomat\ConsoleApp6\bin\Debug\Bankomat.exe.config
+C:\Users\serenity\Documents\Visual Studio 2015\Projects\Bankomat\ConsoleApp6\obj\Debug\Bankomat.exe
+C:\Users\serenity\Documents\Visual Studio 2015\Projects\Bankomat\ConsoleApp6\obj\Debug\Bankomat.pdb
+C:\Users\serenity\Documents\Visual Studio 2015\Projects\Bankomat\ConsoleApp6\bin\Debug\Bankomat.exe
+C:\Users\serenity\Documents\Visual Studio 2015\Projects\Bankomat\ConsoleApp6\bin\Debug\Bankomat.pdb
+C:\Users\serenity\Documents\Visual Studio 2015\Projects\Bankomat\ConsoleApp6\obj\Debug\Bankomat.csprojResolveAssemblyReference.cache

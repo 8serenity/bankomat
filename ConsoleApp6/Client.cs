@@ -3,29 +3,52 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using AccountNamespace;
+using Bankomat.AccountNamespace;
 
-namespace ClientNamespace
+namespace Bankomat
 {
-    public class Client
+    namespace ClientNamespace
     {
-        private string name;
-        private List<Account> clientAccounts;
-
-        public Client(string name)
+        public class Client
         {
-            this.name = name;
-            clientAccounts = new List<Account>();
-        }
+            private string name;
+            private Account dollarAccount;
+            private Account tengeAccount;
+            private Account rubleAccount;
+            private int accountCounter;
 
-        public List<Account> GetAccounts()
-        {
-            return clientAccounts;
-        }
+            public Client(string name)
+            {
+                this.name = name;
+                dollarAccount = new Account("Dollar");
+                tengeAccount = new Account("Tenge");
+                rubleAccount = new Account("Ruble");
+                accountCounter = 3;
+            }
 
-        public string GetName()
-        {
-            return name;
+
+            public int GetAccountCounter()
+            {
+                return accountCounter;
+            }
+
+            public Account GetAccountDollar()
+            {
+                return dollarAccount;
+            }
+            public Account GetAccountTenge()
+            {
+                return tengeAccount;
+            }
+            public Account GetAccountRuble()
+            {
+                return rubleAccount;
+            }
+
+            public string GetName()
+            {
+                return name;
+            }
         }
     }
 }

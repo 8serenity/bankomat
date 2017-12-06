@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BankNamespace;
-using AccountNamespace;
-using ClientNamespace;
-
+using Bankomat.BankNamespace;
+using Bankomat.AccountNamespace;
+using Bankomat.ClientNamespace;
 /*
         Реализовать классы Banc, Client, Account в различных пространствах имен
         (общее пространство имен «Bankomat»). Изначально клиенту нужно открыть счёт в банке,
@@ -42,18 +41,24 @@ namespace Bankomat
     {
         static void Main(string[] args)
         {
+            Bank AstanaBank = new Bank();
+
+            AstanaBank.AddClient("First Client");
+            Console.WriteLine("Account created with 3 accounts.\nUSD ID {0}, TENGE ID {1}, RUBLE ID {2}",
+                AstanaBank.GetClients()[0].GetAccountDollar().GetAccountID(), AstanaBank.GetClients()[0].GetAccountTenge().GetAccountID(),
+                AstanaBank.GetClients()[0].GetAccountRuble().GetAccountID());
+            Console.WriteLine("Please remeber your passwords for 3 accounts. \nUSD ID {0}, TENGE ID {1}, RUBLE ID {2}",
+                AstanaBank.GetClients()[0].GetAccountDollar().GetPassword(), AstanaBank.GetClients()[0].GetAccountTenge().GetPassword(),
+                AstanaBank.GetClients()[0].GetAccountRuble().GetPassword());
+
+            ATM atm1 = new ATM();
+
+            atm1.ShowBalance(AstanaBank.GetClients()[0]);
+
+
+            Console.ReadLine();
 
         }
-
-
-        public int AddAccount(Client client)
-        {
-            Account temp = new Account();
-            client.GetAccounts().Add(temp);
-            return client.GetAccounts()[client.GetAccounts().Count].GetAccountID();
-        }
-
-
-
+        
     }
 }
